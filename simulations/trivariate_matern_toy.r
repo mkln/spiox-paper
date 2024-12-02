@@ -152,7 +152,7 @@ for(ii in 1:60){
   ##############################################
   set.seed(1) 
   estim_time <- system.time({
-    spiox_out <- spiox::spiox_wishart(Y_in, X_in, cx_in, 
+    spiox_out <- spiox::spiox_response(Y_in, X_in, cx_in, 
                                       custom_dag = custom_dag, 
                                       theta=theta_opts,
                                       

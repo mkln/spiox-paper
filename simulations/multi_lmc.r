@@ -139,7 +139,7 @@ for(oo in starts:ends){
     RhpcBLASctl::omp_set_num_threads(1)
     RhpcBLASctl::blas_set_num_threads(1)
     estim_time <- system.time({
-      spiox_gibbs_out <- spiox::spiox_wishart(Y_in, X_in, cx_in, 
+      spiox_gibbs_out <- spiox::spiox_response(Y_in, X_in, cx_in, 
                                               custom_dag = custom_dag, 
                                               theta=theta_opts,
                                               
@@ -226,7 +226,7 @@ for(oo in starts:ends){
     RhpcBLASctl::blas_set_num_threads(1)
     
     estim_time <- system.time({
-      spiox_nnsp <- spiox::spiox_wishart(Y_in, X_in, cx_in, 
+      spiox_nnsp <- spiox::spiox_response(Y_in, X_in, cx_in, 
                                          custom_dag = custom_dag, 
                                          theta=theta_opts_nnsp,
                                          
@@ -285,7 +285,7 @@ for(oo in starts:ends){
                                seq(1e-4,1e-3,length.out=q))
     
     estim_time <- system.time({
-      spiox_mhfull_out <- spiox::spiox_wishart(Y_in, X_in, cx_in, 
+      spiox_mhfull_out <- spiox::spiox_response(Y_in, X_in, cx_in, 
                                                custom_dag = custom_dag, 
                                                theta=theta_opts_mhfull,
                                                
@@ -364,7 +364,7 @@ for(oo in starts:ends){
     RhpcBLASctl::omp_set_num_threads(1)
     RhpcBLASctl::blas_set_num_threads(1)
     estim_time <- system.time({
-      spiox_clust_out <- spiox::spiox_wishart(Y_in, X_in, cx_in, 
+      spiox_clust_out <- spiox::spiox_response(Y_in, X_in, cx_in, 
                                               custom_dag = custom_dag, 
                                               theta=theta_opts_clust,
                                               

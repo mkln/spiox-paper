@@ -148,7 +148,7 @@ n_threads <- 16
     set.seed(1) 
     
     estim_time <- system.time({
-      spiox_out <- spiox::spiox_wishart(Y_in[,outs,drop=F], X_in, cx_in, 
+      spiox_out <- spiox::spiox_response(Y_in[,outs,drop=F], X_in, cx_in, 
                                         custom_dag = custom_dag, 
                                         theta=theta_opts[,1:q,drop=F],
                                         

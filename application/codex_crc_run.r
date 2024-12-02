@@ -101,7 +101,7 @@ if(F){
   
   
   estim_time <- system.time({
-    spiox_mhfull_out <- spiox::spiox_wishart(
+    spiox_mhfull_out <- spiox::spiox_response(
       Y_in, X_in, cx_in, 
       custom_dag = custom_dag, 
       theta=theta_opts,
@@ -178,7 +178,7 @@ if(T){
   
   
   estim_time <- system.time({
-    spiox_clust_out <- spiox::spiox_wishart(
+    spiox_clust_out <- spiox::spiox_response(
       Y_in, X_in, cx_in, 
       custom_dag = custom_dag, 
       theta=theta_opts,
@@ -253,7 +253,7 @@ if(F){
   
   
   nnspat_estim_time <- system.time({
-    nnspat_out <- spiox::spiox_wishart(
+    nnspat_out <- spiox::spiox_response(
       Y_in, X_in, cx_in, 
       custom_dag = custom_dag, 
       theta=theta_opts,
